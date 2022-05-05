@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.txtSaque = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbResultado = new System.Windows.Forms.Label();
@@ -36,24 +37,27 @@
             // 
             // txtSaque
             // 
-            this.txtSaque.Location = new System.Drawing.Point(324, 47);
+            this.txtSaque.Location = new System.Drawing.Point(191, 341);
             this.txtSaque.Name = "txtSaque";
-            this.txtSaque.Size = new System.Drawing.Size(100, 20);
+            this.txtSaque.Size = new System.Drawing.Size(58, 20);
             this.txtSaque.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(117, 55);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(134, 318);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 13);
+            this.label1.Size = new System.Drawing.Size(188, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Informe o valor do saque:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbResultado
             // 
             this.lbResultado.AutoSize = true;
-            this.lbResultado.Location = new System.Drawing.Point(142, 119);
+            this.lbResultado.Location = new System.Drawing.Point(338, 199);
             this.lbResultado.Name = "lbResultado";
             this.lbResultado.Size = new System.Drawing.Size(16, 13);
             this.lbResultado.TabIndex = 2;
@@ -62,25 +66,29 @@
             // 
             // btSacar
             // 
-            this.btSacar.Location = new System.Drawing.Point(339, 216);
+            this.btSacar.BackColor = System.Drawing.Color.Lime;
+            this.btSacar.Location = new System.Drawing.Point(229, 510);
             this.btSacar.Name = "btSacar";
-            this.btSacar.Size = new System.Drawing.Size(75, 23);
+            this.btSacar.Size = new System.Drawing.Size(45, 40);
             this.btSacar.TabIndex = 3;
             this.btSacar.Text = "Sacar";
-            this.btSacar.UseVisualStyleBackColor = true;
+            this.btSacar.UseVisualStyleBackColor = false;
             this.btSacar.Click += new System.EventHandler(this.btSacar_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.ClientSize = new System.Drawing.Size(523, 627);
             this.Controls.Add(this.btSacar);
             this.Controls.Add(this.lbResultado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSaque);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
